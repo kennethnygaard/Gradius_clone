@@ -1,0 +1,220 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://assets/gradius viper spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/shot1.mp3" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Down-neutral"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Neutral-down"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 8 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Up"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 7, 6, 5 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Down-neutral"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Down"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Neutral-down"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "Neutral-up"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "Neutral"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "Up-neutral"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Up"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=23]
+states/Down/node = SubResource( 9 )
+states/Down/position = Vector2( 532.25, 392 )
+states/Down-neutral/node = SubResource( 8 )
+states/Down-neutral/position = Vector2( 353.25, 301.5 )
+states/Neutral/node = SubResource( 12 )
+states/Neutral/position = Vector2( 530, 210.5 )
+states/Neutral-down/node = SubResource( 10 )
+states/Neutral-down/position = Vector2( 706.75, 299.5 )
+states/Neutral-up/node = SubResource( 11 )
+states/Neutral-up/position = Vector2( 662.25, 115.5 )
+states/Up/node = SubResource( 14 )
+states/Up/position = Vector2( 522, 43 )
+states/Up-neutral/node = SubResource( 13 )
+states/Up-neutral/position = Vector2( 382.75, 115 )
+transitions = [ "Neutral", "Neutral-up", SubResource( 15 ), "Neutral-up", "Up", SubResource( 16 ), "Up", "Up-neutral", SubResource( 17 ), "Up-neutral", "Neutral", SubResource( 18 ), "Neutral", "Neutral-down", SubResource( 19 ), "Neutral-down", "Down", SubResource( 20 ), "Down", "Down-neutral", SubResource( 21 ), "Down-neutral", "Neutral", SubResource( 22 ) ]
+start_node = "Neutral"
+graph_offset = Vector2( 47.75, 7 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 512, 300 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 9
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Down = SubResource( 1 )
+anims/Down-neutral = SubResource( 2 )
+anims/Neutral = SubResource( 3 )
+anims/Neutral-down = SubResource( 4 )
+anims/Neutral-up = SubResource( 5 )
+anims/Up = SubResource( 6 )
+anims/Up-neutral = SubResource( 7 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 23 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 24 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 12.332, -0.450165, 1.2359, 2.67624, -8.55048, 3.5659, -13.8885, 2.76988, -16.8853, 1.0842, -16.7916, -3.27051, -10.1893, -6.45459, -1.80771, -6.03316, 12.2852, -2.60411 )
+
+[node name="ShotAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -21.815
+bus = "SFX"

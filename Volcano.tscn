@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Mound#1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Volcano.gd" type="Script" id=2]
+[ext_resource path="res://Ground#1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Trees1.tscn" type="PackedScene" id=4]
+
+[node name="Volcano" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ground#1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 199.991, 0 )
+
+[node name="Trees#1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 199.002, -2.3504 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 760.291, 96.27 )
+
+[node name="Mound#01" parent="." instance=ExtResource( 1 )]
+
+[node name="Mound#02" parent="." instance=ExtResource( 1 )]
+position = Vector2( 399.522, 0 )
+
+[node name="StartTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Left_Spew_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Right_Spew_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="End_Timer" type="Timer" parent="."]
+
+[node name="Outro_Timer" type="Timer" parent="."]
+one_shot = true

@@ -1,0 +1,280 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Jumper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Mound#1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Trees1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Volcano.tscn" type="PackedScene" id=6]
+[ext_resource path="res://WideGround#1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Garun.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ceiling_bump.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ParallaxBackground.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Fans.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Mound#2_Hole.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://WideCeiling#1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Rugal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Ground#1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Ceiling#1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Floating_rock.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Level_001.gd" type="Script" id=19]
+
+[node name="Level_001" type="Node" groups=[
+"main",
+]]
+script = ExtResource( 19 )
+
+[node name="Camera2D" type="Camera2D" parent="." groups=[
+"camera",
+]]
+current = true
+script = ExtResource( 2 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 10 )]
+
+[node name="Player" parent="." groups=[
+"player",
+] instance=ExtResource( 13 )]
+position = Vector2( -287.772, -0.707062 )
+
+[node name="Terrain" type="Node2D" parent="."]
+
+[node name="WideGround#1" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 3333.49, 198.701 )
+
+[node name="WideGround#3" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 7928.06, 198.396 )
+
+[node name="WideGround#7" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 8725.6, 198.396 )
+
+[node name="WideGround#8" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 9524.35, 198.396 )
+
+[node name="WideGround#5" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 6929.02, 198.382 )
+
+[node name="WideGround#4" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 6129.33, 198.549 )
+
+[node name="WideGround#2" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 4333.23, 198.937 )
+
+[node name="WideGround#6" parent="Terrain" instance=ExtResource( 7 )]
+position = Vector2( 5129.4, 198.937 )
+
+[node name="Mound#1" parent="Terrain" instance=ExtResource( 4 )]
+position = Vector2( 3833.28, 198.539 )
+
+[node name="Mound#2" parent="Terrain" instance=ExtResource( 4 )]
+position = Vector2( 7428.1, 198.174 )
+
+[node name="WideCeiling#1" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 3327.19, -202.098 )
+
+[node name="WideCeiling#2" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 4127.03, -201.638 )
+
+[node name="WideCeiling#3" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 4927.03, -201.638 )
+
+[node name="WideCeiling#4" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 5726.68, -201.638 )
+
+[node name="WideCeiling#5" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 6525.79, -201.44 )
+
+[node name="WideCeiling#6" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 7323.57, -201.228 )
+
+[node name="WideCeiling#7" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 8122.59, -201.228 )
+
+[node name="WideCeiling#8" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 8922.15, -201.228 )
+
+[node name="WideCeiling#9" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 9721.46, -200.978 )
+
+[node name="WideCeiling#10" parent="Terrain" instance=ExtResource( 14 )]
+position = Vector2( 10519.7, -200.978 )
+
+[node name="Mound#2_Hole" parent="Terrain" instance=ExtResource( 12 )]
+position = Vector2( 5629.33, 198.689 )
+
+[node name="Trees#1" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 3645.53, 199.036 )
+
+[node name="Trees#2" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 4022.22, 196.516 )
+
+[node name="Trees#3" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 4203.03, 195.256 )
+
+[node name="Trees#4" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 5443.56, 199.751 )
+
+[node name="Trees#5" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 5819.04, 196.922 )
+
+[node name="Trees#6" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 7249.15, 195.733 )
+
+[node name="Trees#7" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 7614.86, 194.473 )
+
+[node name="Trees#8" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 7795.98, 194.473 )
+
+[node name="Trees#9" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 7976.47, 194.473 )
+
+[node name="Trees#10" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 8159.81, 192.886 )
+
+[node name="Trees#11" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 8340.76, 192.092 )
+
+[node name="Trees#12" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 8522.38, 192.092 )
+
+[node name="Trees#15" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 10228.3, 194.466 )
+
+[node name="Trees#13" parent="Terrain" instance=ExtResource( 5 )]
+position = Vector2( 8702.32, 191.251 )
+
+[node name="Ceiling_bump#1" parent="Terrain" instance=ExtResource( 9 )]
+position = Vector2( 4119.44, -202.019 )
+
+[node name="Ceiling_bump#2" parent="Terrain" instance=ExtResource( 9 )]
+position = Vector2( 7090.35, -199.986 )
+
+[node name="Ceiling_bump#3" parent="Terrain" instance=ExtResource( 9 )]
+position = Vector2( 8315.54, -198.428 )
+
+[node name="Floating_rock" parent="Terrain" instance=ExtResource( 18 )]
+position = Vector2( 9449.85, -2.10419 )
+
+[node name="Ground#2" parent="Terrain" instance=ExtResource( 16 )]
+position = Vector2( 10024.4, 198.57 )
+
+[node name="Ground#3" parent="Terrain" instance=ExtResource( 16 )]
+position = Vector2( 10224.5, 198.57 )
+
+[node name="Ground#5" parent="Terrain" instance=ExtResource( 16 )]
+position = Vector2( 11021.8, 199.237 )
+
+[node name="Ceiling#1" parent="Terrain" instance=ExtResource( 17 )]
+position = Vector2( 11019, -200.909 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Garun1-top" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2745.51, -64.1196 )
+
+[node name="Garun1-bottom" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2749.66, 75.4316 )
+
+[node name="Garun2-top" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2967.36, -69.1969 )
+
+[node name="Garun2-bottom" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2971.52, 70.3543 )
+
+[node name="Jumper" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 3808.14, 90.9365 )
+first_shot_delay = 4
+fire_delay = 3
+
+[node name="Jumper2" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 4521.49, 96.3482 )
+shooting = true
+first_shot_delay = 4
+fire_delay = 3
+
+[node name="Jumper3" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 5097.94, 90.0264 )
+shooting = true
+first_shot_delay = 4
+fire_delay = 3
+
+[node name="Rugal" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2625.98, -153.344 )
+
+[node name="Rugal2" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2628.24, -0.33725 )
+
+[node name="Rugal3" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2627.11, 151.536 )
+
+[node name="Rugal4" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2457.1, -156.744 )
+
+[node name="Rugal5" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2459.37, -3.7374 )
+
+[node name="Rugal6" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2458.24, 148.136 )
+
+[node name="Rugal7" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2255.36, -157.878 )
+
+[node name="Rugal8" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2257.63, -4.87079 )
+
+[node name="Rugal9" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 2256.49, 147.003 )
+
+[node name="Rugal10" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3323.01, -149.944 )
+
+[node name="Rugal11" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3325.28, 3.06293 )
+
+[node name="Rugal12" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3324.14, 154.936 )
+
+[node name="Rugal13" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3192.67, -149.944 )
+
+[node name="Rugal14" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3194.94, 3.06293 )
+
+[node name="Rugal15" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3193.8, 154.936 )
+
+[node name="Rugal16" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3066.86, -152.211 )
+
+[node name="Rugal17" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3069.13, 0.796143 )
+
+[node name="Rugal18" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 3068, 152.67 )
+
+[node name="Fans" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 574.365, -237.146 )
+
+[node name="Fans3" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 1176.55, -235.145 )
+
+[node name="Fans5" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 1758.72, -245.148 )
+
+[node name="Fans2" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 890.094, 246.738 )
+direction = 0
+
+[node name="Fans4" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 1464.27, 236.735 )
+direction = 0
+
+[node name="MusicPlayer" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicPlayer"]
+
+[node name="Bosses" type="Node" parent="."]
+
+[node name="Volcano" parent="Bosses" instance=ExtResource( 6 )]
+position = Vector2( 10422.4, 198.66 )

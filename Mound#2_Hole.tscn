@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/images/mound2_hole_reduced.png" type="Texture" id=1]
+
+[node name="Mound#2_Hole" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 9
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -100.186, 79.5572, -87.0034, 74.2175, -69.1489, 57.0305, -57.4684, 52.692, 73.0195, 53.3595, 83.3651, 59.3666, 90.2066, 74.3844, 94.0444, 78.0554, 100.052, 78.7229, 100.385, 100.916, -99.852, 100.415 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -35.5834, -2.43471, -32.6803, 0.936676, 35.4028, 2.06047, 39.5234, -0.280769, 39.898, -3.27755, 28.3791, -17.6996, 22.3856, -31.3724, 13.6762, -40.55, 1.87635, -44.3897, -4.77277, -42.7976, -17.0408, -26.5026, -32.3057, -13.7663 )
